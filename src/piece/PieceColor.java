@@ -3,9 +3,8 @@ package piece;
 public enum PieceColor {
         WHITE("white"),
         BLACK("black");
-
-        private final String name;
         
+        private final String name;
         private PieceColor(String name) {
             this.name = name;
         }

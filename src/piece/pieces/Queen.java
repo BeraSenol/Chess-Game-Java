@@ -1,20 +1,16 @@
 package piece.pieces;
 
-import piece.Piece;
-import piece.PieceColor;
-import piece.PieceType;
-
+import piece.*;
 public class Queen extends Piece {
 
-        public Queen(PieceColor color, int column, int row) {
-                super(color, column, row);
+        public Queen(PieceColor pieceColor, int file, int rank) {
+                super(pieceColor, file, rank);
                 pieceType = PieceType.QUEEN;
                 bufferedImage = getImage(pieceType.getPieceName(), color.getPieceColorName());
         }
 
         @Override
         public boolean isMovable(int targetFile, int targetRank) {
-
                 if (!isWithinBounds(targetFile, targetRank)) {
                         return false;
                 }

@@ -5,10 +5,8 @@ import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-
 import main.Board;
 import main.GamePanel;
-
 public class Piece {
 
         private final int LOWER_BOUND = 0;

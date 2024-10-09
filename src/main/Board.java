@@ -2,7 +2,6 @@ package main;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
-
 public class Board {
         
         private final int MAX_COL = 8;

@@ -1,21 +1,17 @@
 package piece.pieces;
 
 import main.GamePanel;
-import piece.Piece;
-import piece.PieceColor;
-import piece.PieceType;
-
+import piece.*;
 public class King extends Piece {
 
-        public King(PieceColor color, int column, int row) {
-                super(color, column, row);
+        public King(PieceColor pieceColor, int file, int rank) {
+                super(pieceColor, file, rank);
                 pieceType = PieceType.KING;
                 bufferedImage = getImage(pieceType.getPieceName(), color.getPieceColorName());
         }
 
         @Override
         public boolean isMovable(int targetFile, int targetRank) {
-
                 if (!isWithinBounds(targetFile, targetRank)) {
                         return false;
                 }
@@ -27,7 +23,6 @@ public class King extends Piece {
                                                 && isValidTile(targetFile, targetRank)) {
                         return true;
                 }
-
                 if (!hasMoved) {
                         // Right castling
                         if (targetFile != nextFile + 2 || targetRank != nextRank

@@ -11,7 +11,7 @@ The project's code includes:<br>
 - Game Loop
 - Chess Board & Rules
 - General Piece Movement
-- All Chess Pieces
+- All Chess Pieces [images](https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces)
 - Specific Piece Movement
 - Castling, En Passant & Promotion
 - Check Detection & Illegal Move Prevention

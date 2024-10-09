@@ -1,14 +1,11 @@
 package piece.pieces;
 
 import main.GamePanel;
-import piece.Piece;
-import piece.PieceColor;
-import piece.PieceType;
-
+import piece.*;
 public class Pawn extends Piece {
 
-        public Pawn(PieceColor color, int column, int row) {
-                super(color, column, row);
+        public Pawn(PieceColor pieceColor, int file, int rank) {
+                super(pieceColor, file, rank);
                 pieceType = PieceType.PAWN;
                 bufferedImage = getImage(pieceType.getPieceName(), color.getPieceColorName());
         }
@@ -53,8 +50,6 @@ public class Pawn extends Piece {
                                 return true;
                         }
                 }
-
                 return false;
         }
-
 }

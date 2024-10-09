@@ -9,11 +9,9 @@ public enum PieceType {
         KING("king");
 
         private final String name;
-
         private PieceType(String name) {
                 this.name = name;
         }
-
         public String getPieceName() {
                 return name;
         }

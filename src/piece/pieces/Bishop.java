@@ -1,20 +1,15 @@
 package piece.pieces;
 
-import piece.Piece;
-import piece.PieceColor;
-import piece.PieceType;
-
+import piece.*;
 public class Bishop extends Piece {
-
-        public Bishop(PieceColor color, int column, int row) {
-                super(color, column, row);
+        public Bishop(PieceColor pieceColor, int file, int rank) {
+                super(pieceColor, file, rank);
                 pieceType = PieceType.BISHOP;
                 bufferedImage = getImage(pieceType.getPieceName(), color.getPieceColorName());
         }
 
         @Override
         public boolean isMovable(int targetFile, int targetRank) {
-
                 if (!isWithinBounds(targetFile, targetRank)) {
                         return false;
                 }
