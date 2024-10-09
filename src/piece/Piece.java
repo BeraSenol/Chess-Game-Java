@@ -61,7 +61,7 @@ public class Piece {
                 return rank * Board.TILE_SIZE;
         }
 
-        public int getCol(int x) {
+        public int getFile(int x) {
                 return (x + Board.TILE_SIZE_HALF) / Board.TILE_SIZE;
         }
 
@@ -92,9 +92,7 @@ public class Piece {
         }
 
         public boolean isValidTile(int targetFile, int targetRank) {
-
                 collidingPiece = getCollidingPiece(targetFile, targetRank);
-
                 if (collidingPiece != null) {
                         // This tile is not occupied
                         return false;
@@ -244,7 +242,7 @@ public class Piece {
                 }
                 x = getX(currentFile);
                 y = getY(currentRank);
-                nextFile = getCol(x);
+                nextFile = getFile(x);
                 nextRank = getRank(y);
                 hasMoved = true;
         }

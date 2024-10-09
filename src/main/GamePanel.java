@@ -46,7 +46,7 @@ public class GamePanel extends JPanel implements Runnable {
         public static Piece castlingPiece;
         public static ArrayList<Piece> simPieces = new ArrayList<>();
         private PieceColor currentTurnColor = WHITE;
-        
+
         // VARIABLES - OTHER
         private Thread gThread;
 
@@ -456,7 +456,7 @@ public class GamePanel extends JPanel implements Runnable {
                 }
                 selectedPiece.x = MOUSE.x - Board.TILE_SIZE_HALF;
                 selectedPiece.y = MOUSE.y - Board.TILE_SIZE_HALF;
-                selectedPiece.currentFile = selectedPiece.getCol(selectedPiece.x);
+                selectedPiece.currentFile = selectedPiece.getFile(selectedPiece.x);
                 selectedPiece.currentRank = selectedPiece.getRank(selectedPiece.y);
                 if (selectedPiece.isMovable(selectedPiece.currentFile, selectedPiece.currentRank)) {
                         isPieceMovable = true;
@@ -469,7 +469,7 @@ public class GamePanel extends JPanel implements Runnable {
                         }
                 }
         }
-
+        
         @Override
         public void paintComponent(Graphics graphics) {
                 super.paintComponent(graphics);
